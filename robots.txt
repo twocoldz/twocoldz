@@ -1,4 +1,4 @@
 User-agent: *
 Disallow: 
 
-Sitemap: http://twocoldz.github.io/sitemap.xml 
+Sitemap: http://twocoldz.github.io/twocoldz/sitemap.xml 

@@ -2,10 +2,10 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
 
   <title><![CDATA[twocoldz's Blog]]></title>
-  <link href="http://twocoldz.github.io/atom.xml" rel="self"/>
-  <link href="http://twocoldz.github.io/"/>
-  <updated>2013-11-24T05:14:10+08:00</updated>
-  <id>http://twocoldz.github.io/</id>
+  <link href="http://twocoldz.github.io/twocoldz/atom.xml" rel="self"/>
+  <link href="http://twocoldz.github.io/twocoldz/"/>
+  <updated>2013-11-24T05:17:06+08:00</updated>
+  <id>http://twocoldz.github.io/twocoldz/</id>
   <author>
     <name><![CDATA[twocoldz]]></name>
     <email><![CDATA[twocoldz007@gamil.com]]></email>
@@ -15,9 +15,9 @@
   
   <entry>
     <title type="html"><![CDATA[first post]]></title>
-    <link href="http://twocoldz.github.io/blog/2013/11/24/first-post/"/>
+    <link href="http://twocoldz.github.io/twocoldz/blog/2013/11/24/first-post/"/>
     <updated>2013-11-24T04:45:24+08:00</updated>
-    <id>http://twocoldz.github.io/blog/2013/11/24/first-post</id>
+    <id>http://twocoldz.github.io/twocoldz/blog/2013/11/24/first-post</id>
     <content type="html"><![CDATA[<h1>Hello Octopress</h1>
 
 <p>I am so tired,now it is 4:46.</p>
