@@ -4,7 +4,7 @@
   <title><![CDATA[twocoldz's Blog]]></title>
   <link href="http://twocoldz.github.io/twocoldz/atom.xml" rel="self"/>
   <link href="http://twocoldz.github.io/twocoldz/"/>
-  <updated>2013-11-25T23:17:50+08:00</updated>
+  <updated>2013-11-25T23:20:35+08:00</updated>
   <id>http://twocoldz.github.io/twocoldz/</id>
   <author>
     <name><![CDATA[twocoldz]]></name>
@@ -20,9 +20,10 @@
     <id>http://twocoldz.github.io/twocoldz/blog/2013/11/25/sgu185-zui-duan-lu-plus-zui-da-liu</id>
     <content type="html"><![CDATA[<p>好了，填坑来了。<br/>
 这题刚开始搜索sgu+最短路，google给的结果就这题和103了。<br/>
-103是一个比较复杂的spfa吧，还没写。</p>
+103是一个比较复杂的spfa吧，还没写。<br/>
+这题放了两天后终于打算动手开始写了。</p>
 
-<h2>这题放了两天后终于打算动手开始写了。  </h2>
+<hr />
 
 <p>先说题意：<br/>
 题目描述还是很清楚的，就是找从原点到终点有没有两条边不重合最短路径。<br/>
@@ -30,9 +31,10 @@
 题目中描述的是两人不能同时在同一条边上出现。<br/>
 这里会给人一种错觉，觉得可能不同时。<br/>
 其实是不可能的，因为两个人都要走最短路径，<br/>
-换句话说，两人如果到达某个相同的中间点，时间一定是相同的。</p>
+换句话说，两人如果到达某个相同的中间点，时间一定是相同的。<br/>
+这样就不能说选择了从该店出发的同一条路径，而时间不同。</p>
 
-<h2>这样就不能说选择了从该店出发的同一条路径，而时间不同。  </h2>
+<hr />
 
 <p>于是我很SB以为一个spfa稍微改以下就好了，于是很干脆的wa#1<br/>
 这时候才想到可能是一个网络流。<br/>
@@ -45,9 +47,10 @@
 自己检查了一下代码，感觉没什么问题。<br/>
 又想了以下思路什么的，测试了几组数据。没发现问题。<br/>
 于是跑到diss里面去看看，有很多都是wa#20的。<br/>
-但是找了半天都没发现能测出我这题有bug的。</p>
+但是找了半天都没发现能测出我这题有bug的。<br/>
+这时已经是凌晨了。困～～～</p>
 
-<h2>这时已经是凌晨了。困～～～  </h2>
+<hr />
 
 <p>自己乱改交了很多，tle，wa都来遍了。<br/>
 又重建了spfa的图什么的，都没用。<br/>
