@@ -4,7 +4,7 @@
   <title><![CDATA[twocoldz's Blog]]></title>
   <link href="http://twocoldz.github.io/twocoldz/atom.xml" rel="self"/>
   <link href="http://twocoldz.github.io/twocoldz/"/>
-  <updated>2013-11-25T23:05:19+08:00</updated>
+  <updated>2013-11-25T23:17:50+08:00</updated>
   <id>http://twocoldz.github.io/twocoldz/</id>
   <author>
     <name><![CDATA[twocoldz]]></name>
@@ -70,9 +70,10 @@ say flow[N][N],and after 2 argument is done, print the path out with flow.</p></
 <p>我原来的代码跑这组是没问题但是，但是我想，这组数据为什么被提出来。<br/>
 然后就发现问题了，如果第一次找增广路的时候，找到了1-3-4-6<br/>
 其实是还可以增广的，也就是要做两次Dfs和Bfs <br/>
-改了一下上面的数据，果然自己的代码wa了。</p>
+改了一下上面的数据，果然自己的代码wa了。 <br/>
+这时候已经快2点了，电脑也没电了。睡～～～</p>
 
-<h2>这时候已经快2点了，电脑也没电了。睡～～～   </h2>
+<hr />
 
 <p>今天中午改了一下，测试没问题的。 <br/>
 交上去Mle了，呵呵。吐槽下sgu。 <br/>
