@@ -4,7 +4,7 @@
   <title><![CDATA[twocoldz's Blog]]></title>
   <link href="http://twocoldz.github.io/twocoldz/atom.xml" rel="self"/>
   <link href="http://twocoldz.github.io/twocoldz/"/>
-  <updated>2013-11-25T17:48:44+08:00</updated>
+  <updated>2013-11-25T18:02:30+08:00</updated>
   <id>http://twocoldz.github.io/twocoldz/</id>
   <author>
     <name><![CDATA[twocoldz]]></name>
@@ -12,5 +12,14 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[sgu185 最短路+最大流]]></title>
+    <link href="http://twocoldz.github.io/twocoldz/blog/2013/11/25/sgu185-zui-duan-lu-plus-zui-da-liu/"/>
+    <updated>2013-11-25T18:01:22+08:00</updated>
+    <id>http://twocoldz.github.io/twocoldz/blog/2013/11/25/sgu185-zui-duan-lu-plus-zui-da-liu</id>
+    <content type="html"><![CDATA[<h2 id="section">挖坑站位，有空来填</h2>
+]]></content>
+  </entry>
   
 </feed>
