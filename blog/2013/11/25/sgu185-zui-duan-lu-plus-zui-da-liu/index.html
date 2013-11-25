@@ -88,62 +88,62 @@
 	
 	<div id="content" class="inner"><article class="post">
 	<h2 class="title">Sgu185 最短路+最大流</h2>
-	<div class="entry-content"><p>好了，填坑来了。
-这题刚开始搜索sgu+最短路，google给的结果就这题和103了。
-103是一个比较复杂的spfa吧，还没写。
-这题放了两天后终于打算动手开始写了。
-- - -
-先说题意：
-题目描述还是很清楚的，就是找从原点到终点有没有两条边不重合最短路径。
-如果有就输出路径。
-题目中描述的是两人不能同时在同一条边上出现。
-这里会给人一种错觉，觉得可能不同时。
-其实是不可能的，因为两个人都要走最短路径，
-换句话说，两人如果到达某个相同的中间点，时间一定是相同的。
-这样就不能说选择了从该店出发的同一条路径，而时间不同。
-- - -
-于是我很SB以为一个spfa稍微改以下就好了，于是很干脆的wa#1
-这时候才想到可能是一个网络流。
-想到网络流之后呢，有一个很奇怪的想法，就是觉得因为路径不重合嘛。
-感觉一次增广后（也就是dinic做一次Bfs,dfs）后就可以判断出来了。
-最后再做一次dfs就可以把路径搞出来。
-于是就很欢快的写了一个最短路，然后再做一次最大流。
-自己还很感觉良好的，因为sgu卡内存很变态嘛，自己感觉边的复用还不错。
-于是很快的又wa#20
-自己检查了一下代码，感觉没什么问题。
-又想了以下思路什么的，测试了几组数据。没发现问题。
-于是跑到diss里面去看看，有很多都是wa#20的。
-但是找了半天都没发现能测出我这题有bug的。
-这时已经是凌晨了。困～～～
-- - -
-自己乱改交了很多，tle，wa都来遍了。
-又重建了spfa的图什么的，都没用。
-无奈有看了一遍diss，这时候发现一组数据。
-&gt; 6 7
-&gt; 1 2 1
-&gt; 1 3 1
-&gt; 2 4 1
-&gt; 3 4 1
-&gt; 3 5 1
-&gt; 4 6 1
-&gt; 5 6 1 
-&gt; if you first argument
-&gt; 1-3-4-6
-&gt; and you print it ,then it is wrong.
-&gt; all you have to do is ,argument 2 path,and write down the flow in an array,say flow[N][N],and after 2 argument is done, print the path out with flow.
-&gt;</p>
+	<div class="entry-content"><p>好了，填坑来了。<br />
+这题刚开始搜索sgu+最短路，google给的结果就这题和103了。<br />
+103是一个比较复杂的spfa吧，还没写。<br />
+这题放了两天后终于打算动手开始写了。<br />
+- - -<br />
+先说题意：<br />
+题目描述还是很清楚的，就是找从原点到终点有没有两条边不重合最短路径。<br />
+如果有就输出路径。<br />
+题目中描述的是两人不能同时在同一条边上出现。<br />
+这里会给人一种错觉，觉得可能不同时。<br />
+其实是不可能的，因为两个人都要走最短路径，<br />
+换句话说，两人如果到达某个相同的中间点，时间一定是相同的。<br />
+这样就不能说选择了从该店出发的同一条路径，而时间不同。<br />
+- - -<br />
+于是我很SB以为一个spfa稍微改以下就好了，于是很干脆的wa#1<br />
+这时候才想到可能是一个网络流。<br />
+想到网络流之后呢，有一个很奇怪的想法，就是觉得因为路径不重合嘛。<br />
+感觉一次增广后（也就是dinic做一次Bfs,dfs）后就可以判断出来了。<br />
+最后再做一次dfs就可以把路径搞出来。<br />
+于是就很欢快的写了一个最短路，然后再做一次最大流。<br />
+自己还很感觉良好的，因为sgu卡内存很变态嘛，自己感觉边的复用还不错。<br />
+于是很快的又wa#20<br />
+自己检查了一下代码，感觉没什么问题。<br />
+又想了以下思路什么的，测试了几组数据。没发现问题。<br />
+于是跑到diss里面去看看，有很多都是wa#20的。<br />
+但是找了半天都没发现能测出我这题有bug的。<br />
+这时已经是凌晨了。困～～～<br />
+- - -<br />
+自己乱改交了很多，tle，wa都来遍了。<br />
+又重建了spfa的图什么的，都没用。<br />
+无奈有看了一遍diss，这时候发现一组数据。<br />
+&gt; 6 7<br />
+&gt; 1 2 1<br />
+&gt; 1 3 1<br />
+&gt; 2 4 1<br />
+&gt; 3 4 1<br />
+&gt; 3 5 1<br />
+&gt; 4 6 1<br />
+&gt; 5 6 1 <br />
+&gt; if you first argument<br />
+&gt; 1-3-4-6<br />
+&gt; and you print it ,then it is wrong.<br />
+&gt; all you have to do is ,argument 2 path,and write down the flow in an array, <br />
+&gt; say flow[N][N],and after 2 argument is done, print the path out with flow.   </p>
 
-<p>我原来的代码跑这组是没问题但是，但是我想，这组数据为什么被提出来。
-然后就发现问题了，如果第一次找增广路的时候，找到了1-3-4-6
-其实是还可以增广的，也就是要做两次Dfs和Bfs
-改了一下上面的数据，果然自己的代码wa了。
-这时候已经快2点了，电脑也没电了。睡～～～
-- - -
-今天中午改了一下，测试没问题的。
-交上去Mle了，呵呵。吐槽下sgu。
-把某些变量改为short，bool。
-终于got AC！总共submit 26次。
-代码就不贴了，点击<a href="https://github.com/twocoldz/training_for_changchun/blob/master/sgu185.cpp">这里</a> 到我的github上看吧。</p>
+<p>我原来的代码跑这组是没问题但是，但是我想，这组数据为什么被提出来。<br />
+然后就发现问题了，如果第一次找增广路的时候，找到了1-3-4-6<br />
+其实是还可以增广的，也就是要做两次Dfs和Bfs <br />
+改了一下上面的数据，果然自己的代码wa了。 <br />
+这时候已经快2点了，电脑也没电了。睡～～～ <br />
+- - -<br />
+今天中午改了一下，测试没问题的。 <br />
+交上去Mle了，呵呵。吐槽下sgu。 <br />
+把某些变量改为short，bool。 <br />
+终于got AC！总共submit 26次。 <br />
+代码就不贴了，点击<a href="https://github.com/twocoldz/training_for_changchun/blob/master/sgu185.cpp">这里</a> 到我的github上看吧。  </p>
 </div>
 
 
